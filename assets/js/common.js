@@ -184,15 +184,16 @@ $(function() {
 };
 var state = 0;
 Barba.Dispatcher.on("newPageReady", function() {
-    alert("Page Load");
     populate();
     populateMembers();
     if ($("#js-fullpage").length) new Parallax($(".js-parallax-moon").get(0)), new Parallax($(".js-parallax-moonlight").get(0)), new Parallax($(".js-parallax-star").get(0));
     isSp && $(".page-top").height($(window).height())
 }), $(function() {
-    alert("Page Load3");
+    populate();
+    populateMembers();
     fullPage();
-    alert("Page Load2");
+    populate();
+    populateMembers();
     var height = $(window).height();
     $(".js-menuBtn").on("click", function() {
         $(".menuIcon").toggleClass("js-menuOpen"), $(".global-nav").toggleClass("js-open"), $(window).scrollTop() > height && $("header").toggleClass("js-color"), $(this).hasClass("js-menuOpen") ? (console.log("curation"), Barba.Pjax.getTransition = function() {
@@ -396,7 +397,8 @@ var PageTransitionTop = Barba.BaseTransition.extend({
             })
         },
         finish: function() {
-            alert("Page Load done");
+            populate();
+            populateMembers();
             this.done()
         }
     });
