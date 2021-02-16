@@ -338,7 +338,6 @@ var PageTransitionTop = Barba.BaseTransition.extend({
             })
         },
         finish: function() {
-            populate();
             this.done()
         }
     }),
@@ -356,7 +355,6 @@ var PageTransitionTop = Barba.BaseTransition.extend({
                     easing: "easeInOutCubic",
                     complete: function() {
                         $(".menuIcon").removeClass("js-menuOpen"), $(".global-nav").removeClass("js-open"), $("body,html").scrollTop(0), resolve()
-                        populate();
                     }
                 })
             })
@@ -370,7 +368,6 @@ var PageTransitionTop = Barba.BaseTransition.extend({
                 easing: "easeInOutCubic"
             });
             this.done()
-            populate();
         }
     }),
     PageTransitionUnder = Barba.BaseTransition.extend({
@@ -403,10 +400,8 @@ var PageTransitionTop = Barba.BaseTransition.extend({
             populate();
             populateMembers();
             this.done()
-            populate();
         }
     });
 $(function() {
     Barba.Pjax.start(), Barba.Prefetch.init(), Barba.Utils.xhrTimeout = 1e4
-    populate();
 });
