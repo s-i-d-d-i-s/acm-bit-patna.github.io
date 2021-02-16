@@ -1072,7 +1072,7 @@ header .global-nav {
     background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(42%, #8c2b7a), to(#ff4d5a));
     background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
     background-image: -o-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
-    background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
+    background-image: linear-gradient(to right, #072142, #353535 42%, #3a2557);
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -1218,10 +1218,10 @@ header .global-nav__sns a:last-child {
     height: 100vh;
     top: 0;
     left: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#072142), color-stop(#061c37), color-stop(#07182b), color-stop(#061220), to(#020b16));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0f1b2b), color-stop(#061c37), color-stop(#07182b), color-stop(#061220), to(#020b16));
     background-image: -webkit-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
     background-image: -o-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
-    background-image: linear-gradient(to bottom, #072142, #061c37, #07182b, #061220, #020b16);
+    background-image: linear-gradient(to bottom, #080b0e, #1d161f, #282131, #170620, #131315);
     z-index: -200
 }
 
@@ -1529,24 +1529,21 @@ header .global-nav__sns a:last-child {
 }
 
 .image--works {
-    background-image: url(../img/current_team.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .image--about {
-    background: url(../img/latestevent.png) no-repeat center;
     background-size: cover
 }
 
 .image--rankers {
-    background: url(../img/toprankers.jpg) no-repeat center;
     background-size: cover
 }
 
 .image--contact {
-    background: url(../img/contact.jpg) no-repeat center;
+    background: url(https://zoltandallos.com/wp-content/uploads/2018/04/template_products_hero_sample.jpg) no-repeat center;
     background-size: cover
 }
 

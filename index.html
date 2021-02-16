@@ -33,8 +33,8 @@
     <a class="name" href="./">ACM Student Chapter BIT-Patna</a>
     <div class="wrap">
         <div class="icons">
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank">Members</a>
+            <a href="https://www.facebook.com/acmbitpatna/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="members.html" target="_blank">Members</a>
         </div>
         <div class="menuIcon js-menuBtn"></div>
     </div>
@@ -98,10 +98,10 @@
                     <div class="title">
                         <h2 class="title__lead js-letter">Latest Events</h2>
                         <div class="border js-letter"><span></span><span class="js-letter"></span></div>
-                        <p class="title__lead js-letter">CQM X.X</p>
-                        <div class="btn-wrap js-letter"><a class="btn" href="./about.html">Tell me more</a></div>
+                        <p class="title__lead js-letter" id="latest_event_title">CQM X.X</p>
+                        <div class="btn-wrap js-letter"><a class="btn" href="events.html">Tell me more</a></div>
                     </div>
-                    <a class="image image--about" href="./about.html">
+                    <a class="image image--about" href="events.html" style="background: url(assets/img/latestevent.png) no-repeat center !important" id="latest_event_banner">
                         <div class="image__over">
                             <div class="image__cover"></div>
                             <div class="image__cover"></div>
@@ -113,12 +113,12 @@
             <div class="section">
                 <div class="fullpage__slide">
                     <div class="title">
-                        <h2 class="title__text js-letter"><span class="title__text--small">ACM</span><br>X.0</h2>
+                        <h2 class="title__text js-letter"><span class="title__text--small">ACM</span><br><span id="current_team">X.0</span></h2>
                         <div class="border js-letter"><span></span><span class="js-letter"></span></div>
                         <p class="title__lead js-letter">Current ACM Team</p>
-                        <div class="btn-wrap js-letter"><a class="btn" href="#">Members</a></div>
+                        <div class="btn-wrap js-letter"><a class="btn" href="members.html">Members</a></div>
                     </div>
-                    <a class="image image--works" href="#">
+                    <a class="image image--works" href="members.html" style="background-image: url(assets/img/current_team.jpg) !important;" id="current_team_pic">
                         <div class="image__over">
                             <div class="image__cover"></div>
                             <div class="image__cover"></div>
@@ -129,13 +129,13 @@
             <div class="section">
                 <div class="fullpage__slide">
                     <div class="title">
-                        <h2 class="title__lead js-letter">Top Coders 202X</h2>
+                        <h2 class="title__lead js-letter" id="top_coder_session">Top Coders 202X</h2>
                         <div class="border js-letter"><span></span><span class="js-letter"></span></div>
                         <ul>
                             <li class="js-letter">Current Rankers</li>
                         </ul>
                     </div>
-                    <div class="image image--rankers">
+                    <div class="image image--rankers" style="background: url(assets/img/toprankers.jpg) no-repeat center !important;" id="current_ranking_batch_image">
                         <div class="image__over">
                             <div class="image__cover"></div>
                             <div class="image__cover"></div>
@@ -149,8 +149,8 @@
                         <h2 class="title__text js-letter">Contact</h2>
                         <div class="border js-letter"><span></span><span class="js-letter"></span></div>
                         <ul>
-                            <li class="js-letter"><a href="mailto:codingclub.bitp@bitmesra.ac.in">codingclub.bitp@bitmesra.ac.in</a></li>
-                            <li class="js-letter">+91 98765-43210</li>
+                            <li class="js-letter"><a href="mailto:codingclub.bitp@bitmesra.ac.in" id="contact_email">codingclub.bitp@bitmesra.ac.in</a></li>
+                            <li class="js-letter" id="contact_no">+91 98765-43210</li>
                         </ul>
                     </div>
                     <div class="image image--contact">
@@ -184,6 +184,43 @@
 <script src="assets/js/parallax.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 <script src="assets/js/common.js"></script>
+<script src="data.js"></script>
+<script>
+
+    // Latest Event
+    latest_event_title = document.getElementById('latest_event_title');
+    latest_event_title.innerText = data['latest_event_title'];
+    
+
+    // Latest Event Banner
+    latest_event_banner = document.getElementById('latest_event_banner');
+    latest_event_banner.style.background="url("+data['latest_event_banner']+") center center no-repeat";
+
+    // Current Team
+    current_team = document.getElementById('current_team');
+    current_team.innerText = data['current_team'];
+
+    // Current Team Pic
+    current_team_pic = document.getElementById('current_team_pic');
+    current_team_pic.style.background="url("+data['current_team_pic']+") center center no-repeat";
+
+    // Top Coders Session
+    top_coder_session = document.getElementById('top_coder_session')
+    top_coder_session.innerText = "Top Coders " + data['current_ranking_batch'];
+
+    // Top Coders Banner
+    current_ranking_batch_image = document.getElementById('current_ranking_batch_image');
+    current_ranking_batch_image.style.background="url("+data['current_ranking_batch_image']+") center center no-repeat";
+
+    // Contact Mail
+    contact_email = document.getElementById('contact_email');
+    contact_email.href="mailto:"+data['contact_email'];
+    contact_email.innerText = data['contact_email'];
+
+    // Contact No
+    contact_no = document.getElementById('contact_no');
+    contact_no.innerText = data['contact_no'];
+</script>
 </body>
 
 </html>
