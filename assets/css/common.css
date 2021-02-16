@@ -528,7 +528,7 @@ img {
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    color: #fff;
+    color: rgb(194, 22, 209);
     z-index: 100
 }
 
@@ -536,7 +536,7 @@ img {
     content: "";
     width: 2px;
     height: 64px;
-    background: #fff;
+    background: rgb(71, 2, 62);
     position: absolute;
     left: 0;
     right: 0;
@@ -746,7 +746,7 @@ img {
     height: 100vh;
     position: relative;
     color: #fff;
-    background: #020b16
+    background: #4d136b
 }
 
 @media screen and (max-width:420px) {
@@ -792,7 +792,6 @@ img {
 }
 
 .page-top .image__reile {
-    background-image: url(../img/cfigm2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1319,7 +1318,7 @@ header .global-nav__sns a:last-child {
 #fp-nav ul li a {
     width: 24px;
     height: 100%;
-    background: #fff;
+    background: #774bff;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s

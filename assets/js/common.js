@@ -2,7 +2,7 @@ function fullPage() {
     $("#js-fullpage").fullpage({
         easingcss3: "cubic-bezier(0.645, 0.045, 0.355, 1)",
         scrollingSpeed: 1e3,
-        anchors: ["top", "reile", "about", "rankers", "contact"],
+        anchors: ["top", "events", "about", "rankers", "contact"],
         navigation: !0,
         navigationPosition: "left",
         animateAnchor: !1,
