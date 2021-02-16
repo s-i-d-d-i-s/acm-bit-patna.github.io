@@ -68,5 +68,9 @@ try{
 }
 
 // Current Session
-current_session = document.getElementById('current_session');
-current_session.innerText = data['current_session'];
+try{
+	current_session = document.getElementById('current_session');
+	current_session.innerText = data['current_session'];
+}catch(err){
+	console.log(err);
+}
