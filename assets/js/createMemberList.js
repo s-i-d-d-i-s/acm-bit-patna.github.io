@@ -64,10 +64,13 @@ function getCoordinatorMemberContent(){
 	return res;
 }
 
+function populateMembers(){
+	d = document.getElementsByClassName('wrapper')[0];
+	d.innerHTML +=  getCoreMemberHeading();
+	d.innerHTML +=  getCoreMemberContent();
+	d.innerHTML +=  getCoordinatorMemberHeading();
+	d.innerHTML +=  getCoordinatorMemberContent();
 
-d = document.getElementsByClassName('wrapper')[0];
-d.innerHTML +=  getCoreMemberHeading();
-d.innerHTML +=  getCoreMemberContent();
-d.innerHTML +=  getCoordinatorMemberHeading();
-d.innerHTML +=  getCoordinatorMemberContent();
+}
 
+populateMembers();
