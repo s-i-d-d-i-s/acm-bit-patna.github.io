@@ -190,7 +190,9 @@ Barba.Dispatcher.on("newPageReady", function() {
     if ($("#js-fullpage").length) new Parallax($(".js-parallax-moon").get(0)), new Parallax($(".js-parallax-moonlight").get(0)), new Parallax($(".js-parallax-star").get(0));
     isSp && $(".page-top").height($(window).height())
 }), $(function() {
+    alert("Page Load3");
     fullPage();
+    alert("Page Load2");
     var height = $(window).height();
     $(".js-menuBtn").on("click", function() {
         $(".menuIcon").toggleClass("js-menuOpen"), $(".global-nav").toggleClass("js-open"), $(window).scrollTop() > height && $("header").toggleClass("js-color"), $(this).hasClass("js-menuOpen") ? (console.log("curation"), Barba.Pjax.getTransition = function() {
@@ -209,6 +211,7 @@ var topTransition = Barba.BaseView.extend({
             return PageTransitionTop
         }, $(".js-contact").on("click", function() {
             $(".menuIcon").removeClass("js-menuOpen"), $(".global-nav").removeClass("js-open"), $.fn.fullpage.moveTo("contact"), Barba.Pjax.getTransition = function() {
+                alert("Page Load4");
                 return PageTransitionTop
             }
         })
@@ -393,6 +396,7 @@ var PageTransitionTop = Barba.BaseTransition.extend({
             })
         },
         finish: function() {
+            alert("Page Load done");
             this.done()
         }
     });
