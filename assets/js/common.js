@@ -184,28 +184,13 @@ $(function() {
 };
 var state = 0;
 Barba.Dispatcher.on("newPageReady", function() {
-    try{
-        populate();
-        populateMembers();
-    }catch(err){
-        console.log(err);
-    }
+
     if ($("#js-fullpage").length) new Parallax($(".js-parallax-moon").get(0)), new Parallax($(".js-parallax-moonlight").get(0)), new Parallax($(".js-parallax-star").get(0));
     isSp && $(".page-top").height($(window).height())
 }), $(function() {
-    try{
-        populate();
-        populateMembers();
-    }catch(err){
-        console.log(err);
-    }
+    
     fullPage();
-    try{
-        populate();
-        populateMembers();
-    }catch(err){
-        console.log(err);
-    }
+    
     var height = $(window).height();
     $(".js-menuBtn").on("click", function() {
         $(".menuIcon").toggleClass("js-menuOpen"), $(".global-nav").toggleClass("js-open"), $(window).scrollTop() > height && $("header").toggleClass("js-color"), $(this).hasClass("js-menuOpen") ? (console.log("curation"), Barba.Pjax.getTransition = function() {
@@ -224,12 +209,7 @@ var topTransition = Barba.BaseView.extend({
             return PageTransitionTop
         }, $(".js-contact").on("click", function() {
             $(".menuIcon").removeClass("js-menuOpen"), $(".global-nav").removeClass("js-open"), $.fn.fullpage.moveTo("contact"), Barba.Pjax.getTransition = function() {
-                try{
-                    populate();
-                    populateMembers();
-                }catch(err){
-                    console.log(err);
-                }
+                
                 return PageTransitionTop
             }
         })
@@ -355,12 +335,7 @@ var PageTransitionTop = Barba.BaseTransition.extend({
             })
         },
         finish: function() {
-            try{
-                populate();
-                populateMembers();
-            }catch(err){
-                console.log(err);
-            }
+            
             this.done()
         }
     }),
@@ -378,12 +353,7 @@ var PageTransitionTop = Barba.BaseTransition.extend({
                     easing: "easeInOutCubic",
                     complete: function() {
                         $(".menuIcon").removeClass("js-menuOpen"), $(".global-nav").removeClass("js-open"), $("body,html").scrollTop(0), resolve()
-                        try{
-                            populate();
-                            populateMembers();
-                        }catch(err){
-                            console.log(err);
-                        }
+                        
                     }
                 })
             })
@@ -397,12 +367,6 @@ var PageTransitionTop = Barba.BaseTransition.extend({
                 easing: "easeInOutCubic"
             });
             this.done()
-            try{
-                populate();
-                populateMembers();
-            }catch(err){
-                console.log(err);
-            }
         }
     }),
     PageTransitionUnder = Barba.BaseTransition.extend({
@@ -432,25 +396,10 @@ var PageTransitionTop = Barba.BaseTransition.extend({
             })
         },
         finish: function() {
-            try{
-                populate();
-                populateMembers();
-            }catch(err){
-                console.log(err);
-            }
             this.done()
-            try{
-                populate();
-            }catch(err){
-                console.log(err);
-            }
         }
     });
 $(function() {
     Barba.Pjax.start(), Barba.Prefetch.init(), Barba.Utils.xhrTimeout = 1e4
-    try{
-        populate();
-    }catch(err){
-        console.log(err);
-    }
+
 });
