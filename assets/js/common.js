@@ -1,7 +1,7 @@
 function fullPage() {
     $("#js-fullpage").fullpage({
         easingcss3: "cubic-bezier(0.645, 0.045, 0.355, 1)",
-        scrollingSpeed: 1e3,
+        scrollingSpeed: 300,
         anchors: ["top", "events", "about", "rankers", "contact"],
         navigation: !0,
         navigationPosition: "left",
@@ -27,7 +27,7 @@ function fullPage() {
                     translateX: ["10%", 0],
                     translateZ: 0,
                     easing: "easeOutCubic",
-                    duration: 1500,
+                    duration: 1000,
                     delay: 500
                 }).add({
                     targets: nextClass + " .image__cover",
@@ -50,7 +50,7 @@ function fullPage() {
                     translateX: ["-105%", 0],
                     translateZ: 0,
                     easing: "easeInOutCubic",
-                    duration: 800,
+                    duration: 700,
                     delay: function(el, i) {
                         return 50 * i
                     },
